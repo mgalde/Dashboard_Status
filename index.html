@@ -162,47 +162,6 @@
     </table>
 
   </div>
-
-  <script>
-    let app = new Vue({
-      el: "#app",
-      data: {
-        siteDataUrl: "data.json",
-        sites: []
-      },
-
-      created: function () {
-        this.loadData();
-      },
-      methods: {
-        getHref: function (site) {
-          return `${site.url}`;
-        },
-        loadData: function () {
-          let self = this
-          fetch(this.siteDataUrl)
-            .then(r => r.json())
-            .then((resp) => {
-              self.sites = resp
-              self.getStatus();
-            });
-        },
-        getStatus: function () {
-          let self = this;
-          self.sites.forEach(function (site, index) {
-            let url = `${site.url}`;
-            fetch(url, { mode: 'no-cors'})
-              .then((resp) => {
-                site.status = true;
-                if (!resp.ok || resp.status != 200) site.status = false;
-                if (resp.type == "opaque") site.status = true;
-                self.$set(self.sites, index, site);
-              })
-          })
-        }
-      }
-    })
-  </script>
     </main>
   </div>
 </div>
@@ -210,5 +169,45 @@
 <script>window.jQuery || document.write('<script src="jquery-slim.min.js"><\/script>')</script>
 <script src="bootstrap.bundle.min.js"></script>
 <script src="feather.min.js"></script>
+<script>
+  let app = new Vue({
+    el: "#app",
+    data: {
+      siteDataUrl: "data.json",
+      sites: []
+    },
+
+    created: function () {
+      this.loadData();
+    },
+    methods: {
+      getHref: function (site) {
+        return `${site.url}`;
+      },
+      loadData: function () {
+        let self = this
+        fetch(this.siteDataUrl)
+          .then(r => r.json())
+          .then((resp) => {
+            self.sites = resp
+            self.getStatus();
+          });
+      },
+      getStatus: function () {
+        let self = this;
+        self.sites.forEach(function (site, index) {
+          let url = `${site.url}`;
+          fetch(url, { mode: 'no-cors'})
+            .then((resp) => {
+              site.status = true;
+              if (!resp.ok || resp.status != 200) site.status = false;
+              if (resp.type == "opaque") site.status = true;
+              self.$set(self.sites, index, site);
+            })
+        })
+      }
+    }
+  })
+</script>
 
 </html>
