@@ -30,8 +30,8 @@
           <td>{{ index + 1 }}</td>
           <td>{{ site.name }}</td>
           <td><a v-bind:href="getHref(site)" target="_blank">{{ site.url }}</a></td>
-          <td v-if="site.status"><span class="badge badge-success">LIVE</span></td>
-          <td v-else><span class="badge badge-danger">DOWN</span></td>
+          <td v-if="site.status"><span class="badge badge-success">On Line</span></td>
+          <td v-else><span class="badge badge-danger">Off Line</span></td>
         </tr>
       </tbody>
     </table>
@@ -53,7 +53,6 @@
 
       methods: {
         getHref: function (site) {
-          if (!site.port) site.port = 80;
           return `${site.url}`;
         },
 
@@ -71,8 +70,6 @@
           let self = this;
           self.sites.forEach(function (site, index) {
             let url = `${site.url}`;
-            if (site.port && site.port != 80 && site.port != 443) url += `:${site.port}`;
-
             fetch(url, { mode: 'no-cors'})
               .then((resp) => {
                 site.status = true;
