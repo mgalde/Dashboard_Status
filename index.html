@@ -56,7 +56,9 @@
       methods: {
         getHref: function (site) {
           if (!site.port) site.port = 80;
-          return `http://${site.url}:${site.port}`;
+          return `http://${site.url}`;
+          if (!site.port) site.port = 443;
+          return `https://${site.url}`;
         },
 
         loadData: function () {
