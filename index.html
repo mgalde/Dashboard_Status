@@ -57,9 +57,9 @@
         getHref: function (site) {
           if (!site.port) site.port = 80;
           return `http://${site.url}`;
-          if site.port = 80;
+          if (site.port) site.port = 80;
           return `http://${site.url}`;
-          if site.port = 443;
+          if (site.port) site.port = 443;
           return `https://${site.url}`;
         },
 
