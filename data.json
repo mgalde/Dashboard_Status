@@ -1,19 +1,19 @@
 [
   {
     "name": "Testbed Tickets",
-    "url": "testbed.nari-cyber.com"
+    "url": "http://testbed.nari-cyber.com"
   },
   {
     "name": "Google.com",
-    "url": "google.com",
+    "url": "https://google.com",
     "port": 443
   },
   {
     "name": "Facebook",
-    "url": "facebook.com"
+    "url": "https://facebook.com"
   },
   {
     "name": "Nari-Cyber",
-    "url": "nari-cyber.com"
+    "url": "https://nari-cyber.com"
   }
 ]
