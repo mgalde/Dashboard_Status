@@ -22,7 +22,6 @@
           <th>No.</th>
           <th>Name</th>
           <th>URL</th>
-          <th>Port</th>
           <th>Status</th>
         </tr>
       </thead>
@@ -31,7 +30,6 @@
           <td>{{ index + 1 }}</td>
           <td>{{ site.name }}</td>
           <td><a v-bind:href="getHref(site)" target="_blank">{{ site.url }}</a></td>
-          <td>{{ site.port }}</td>
           <td v-if="site.status"><span class="badge badge-success">LIVE</span></td>
           <td v-else><span class="badge badge-danger">DOWN</span></td>
         </tr>
@@ -57,10 +55,6 @@
         getHref: function (site) {
           if (!site.port) site.port = 80;
           return `http://${site.url}`;
-          if (site.port) site.port = 80;
-          return `http://${site.url}`;
-          if (site.port) site.port = 443;
-          return `https://${site.url}`;
         },
 
         loadData: function () {
