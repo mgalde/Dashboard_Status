@@ -43,7 +43,10 @@
     </ul>
   </nav>
   <div class="container-fluid">
-    <div id="app" class="container col-md-8 col-md-offset-2">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div id="app" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+    <!-- <div id="app" class="container col-md-8 col-md-offset-2"> -->
       <h1>Status</h1>
       <h4>System Status Details:</h4>
       <table class="table table-stripped table-hover" id="cont-table">
@@ -66,8 +69,9 @@
         </tbody>
       </table>
     </div>
-  </div>
-  
+  </main>
+</div>
+
 
   <script>
     let app = new Vue({
