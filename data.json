@@ -1,8 +1,7 @@
 [
   {
     "name": "Testbed Tickets",
-    "url": "testbed.nari-cyber.com",
-    "port": 80
+    "url": "testbed.nari-cyber.com"
   },
   {
     "name": "Google.com",
