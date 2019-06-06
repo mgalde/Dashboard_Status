@@ -54,7 +54,7 @@
       methods: {
         getHref: function (site) {
           if (!site.port) site.port = 80;
-          return `http://${site.url}`;
+          return `${site.url}`;
         },
 
         loadData: function () {
@@ -70,7 +70,7 @@
         getStatus: function () {
           let self = this;
           self.sites.forEach(function (site, index) {
-            let url = `https://${site.url}`;
+            let url = `${site.url}`;
             if (site.port && site.port != 80 && site.port != 443) url += `:${site.port}`;
 
             fetch(url, { mode: 'no-cors'})
