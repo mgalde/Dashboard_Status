@@ -5,7 +5,7 @@
   <title>Site Status</title>
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
   <style>#cont-table { margin-top: 50px; margin-bottom: 50px; }</style>
 </head>
@@ -32,8 +32,8 @@
           <td>{{ site.name }}</td>
           <td><a v-bind:href="getHref(site)" target="_blank">{{ site.url }}</a></td>
           <td>{{ site.port }}</td>
-          <td v-if="site.status"><span class="label label-success">LIVE</span></td>
-          <td v-else><span class="label label-danger">DOWN</span></td>
+          <td v-if="site.status"><span class="badge badge-success">LIVE</span></td>
+          <td v-else><span class="badge badge-danger">DOWN</span></td>
         </tr>
       </tbody>
     </table>
