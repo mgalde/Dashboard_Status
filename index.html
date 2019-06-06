@@ -34,7 +34,7 @@
 
 <body>
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Network Status Display</a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Network Status Display</a>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
@@ -42,33 +42,32 @@
       </li>
     </ul>
   </nav>
-
-  <div id="app" class="container col-md-8 col-md-offset-2">
-    <br>
-    <h1>Status</h1>
-    <h4>System Status Details:</h4>
-
-    <table class="table table-stripped table-hover" id="cont-table">
-      <thead>
-        <tr>
-          <th>No.</th>
-          <th>Name</th>
-          <th>URL</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(site, index) in sites">
-          <td>{{ index + 1 }}</td>
-          <td>{{ site.name }}</td>
-          <td><a v-bind:href="getHref(site)" target="_blank">{{ site.url }}</a></td>
-          <td v-if="site.status"><span class="badge badge-success">On Line</span></td>
-          <td v-else><span class="badge badge-danger">Off Line</span></td>
-        </tr>
-      </tbody>
-    </table>
-
+  <div class="container-fluid">
+    <div id="app" class="container col-md-8 col-md-offset-2">
+      <h1>Status</h1>
+      <h4>System Status Details:</h4>
+      <table class="table table-stripped table-hover" id="cont-table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(site, index) in sites">
+            <td>{{ index + 1 }}</td>
+            <td>{{ site.name }}</td>
+            <td><a v-bind:href="getHref(site)" target="_blank">{{ site.url }}</a></td>
+            <td v-if="site.status"><span class="badge badge-success">On Line</span></td>
+            <td v-else><span class="badge badge-danger">Off Line</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+  
 
   <script>
     let app = new Vue({
