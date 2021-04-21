@@ -5,11 +5,11 @@
   },
   {
     "name": "DNS",
-    "url": "https://192.168.0.50/"
+    "url": "http://192.168.0.50/"
   },
   {
     "name": "Google Wifi",
-    "url": "https://192.168.86.1/"
+    "url": "http://192.168.86.1/"
   },
   {
     "name": "D2L",
