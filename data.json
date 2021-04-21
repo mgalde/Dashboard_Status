@@ -1,7 +1,7 @@
 [
   {
     "name": "Router",
-    "url": "http://192.168.0.1"
+    "url": "http://192.168.0.1/"
   },
   {
     "name": "DNS",
