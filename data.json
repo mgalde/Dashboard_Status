@@ -1,15 +1,15 @@
 [
   {
     "name": "Router",
-    "url": "http://192.168.0.1/"
+    "url": "https://192.168.0.1/"
   },
   {
     "name": "DNS",
-    "url": "http://192.168.0.50"
+    "url": "https://192.168.0.50/"
   },
   {
     "name": "Google Wifi",
-    "url": "http://192.168.86.1"
+    "url": "https://192.168.86.1/"
   },
   {
     "name": "D2L",
