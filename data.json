@@ -1,22 +1,22 @@
 [
   {
-    "name": "Github",
-    "url": "https://github.com"
+    "name": "Router",
+    "url": "192.168.0.1"
+  },
+  {
+    "name": "DNS",
+    "url": "192.168.0.50"
+  },
+  {
+    "name": "Google Wifi",
+    "url": "192.168.86.1"
+  },
+  {
+    "name": "D2L",
+    "url":  "https://d2l.arizona.edu/d2l/home"
   },
   {
     "name": "Google",
     "url": "https://google.com"
-  },
-  {
-    "name": "Facebook",
-    "url": "https://facebook.com"
-  },
-  {
-    "name": "Testbed Tickets",
-    "url":  "http://testbed.nari-cyber.com/"
-  },
-  {
-    "name": "Nari Cyber",
-    "url": "https://nari-cyber.com"
   }
 ]
